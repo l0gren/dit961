@@ -45,6 +45,7 @@ public class PriorityQueue<E> {
 	// siftUp(index) fixes the invariant if the element at 'index' may
 	// be less than its parent, but all other elements are correct.
 	private void siftUp(int index) {
+		int original = index; //See if item has been shifted
 		E value = heap.get(index);
 
 		// Stop when parent is root
@@ -56,14 +57,17 @@ public class PriorityQueue<E> {
 				index = parent;
 			} else break;
 		}
-
-		heap.set(index, value);
+		
+		if(index != original) {
+			heap.set(index, value);
+		}
 	}
      
 	// Sifts a node down.
 	// siftDown(index) fixes the invariant if the element at 'index' may
 	// be greater than its children, but all other elements are correct.
 	private void siftDown(int index) {
+		int original = index; //See if item has been shifted
 		E value = heap.get(index);
 		
 		// Stop when the node is a leaf.
@@ -94,7 +98,10 @@ public class PriorityQueue<E> {
 			} else break;
 		}
 
-		heap.set(index, value);
+
+		if(index != original) {
+			heap.set(index, value);
+		}
 	}
 
 	// Helper functions for calculating the children and parent of an index.
