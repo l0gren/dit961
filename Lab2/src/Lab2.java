@@ -74,6 +74,7 @@ public class Lab2 {
 		Bid bid4 = new Bid("Dda", 21);
 		Bid bid5 = new Bid("Eda", 0);
 		Bid bid6 = new Bid("Fda", 24);
+		Bid bid7 = new Bid("Gda", 1337);
 		BuyerComparator buyerComparator = new BuyerComparator();
 		SellerComparator sellerComparator = new SellerComparator();
 		PriorityQueue<Bid> buyers = new PriorityQueue<>(buyerComparator);
@@ -83,6 +84,7 @@ public class Lab2 {
 		buyers.add(bid4);
 		buyers.add(bid5);
 		buyers.add(bid6);
+		buyers.add(bid7);
 
 		int size = buyers.size();
 		for(int i = 0; i < size; i++) {
