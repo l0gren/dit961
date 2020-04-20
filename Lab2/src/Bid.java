@@ -21,7 +21,7 @@ public class Bid {
 	}
 	
 	public String toString(){
-		return name + ": " + bid;
+		return name + " " + bid;
 	}
 }
 
