@@ -16,7 +16,7 @@ public class Bid {
 
 		Bid bid = (Bid) obj;
 
-		if(this.hashCode() == obj.hashCode()) return true;
+		if(this.name.equals(bid.name)) return true;
 		else return false;
 	}
 	

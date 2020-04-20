@@ -1,9 +1,11 @@
 import java.util.*;
+import java.util.HashMap;
 
 // A priority queue.
 public class PriorityQueue<E> {
-	private ArrayList<E> heap = new ArrayList<E>();
+	private ArrayList<E> heap = new ArrayList<>();
 	private Comparator<E> comparator;
+	private HashMap<E, Integer> positions = new HashMap<>();
 
 	public PriorityQueue(Comparator<E> comparator) {
 		this.comparator = comparator;
@@ -15,9 +17,10 @@ public class PriorityQueue<E> {
 	}
      
 	// Adds an item to the priority queue.
-	public void add(E x) {
-		heap.add(x);
+	public void add(E elem) {
+		heap.add(elem);
 		int index = heap.size()-1;
+		updatePosition(elem, index);
 		siftUp(index);
 	}
 
@@ -36,9 +39,27 @@ public class PriorityQueue<E> {
 		if (size() == 0)
 			throw new NoSuchElementException();
 
-		heap.set(0, heap.get(heap.size()-1));
+		this.positions.remove(heap.get(0));
+		E lastElem = heap.get(heap.size()-1);
+		heap.set(0, lastElem);
+		updatePosition(lastElem, 0);
 		heap.remove(heap.size()-1);
 		if (heap.size() > 0) siftDown(0);
+	}
+
+	// Updates the value of elem in the queue
+	public void update(E oldElem, E newElem) {
+		Integer index = this.positions.get(oldElem);
+		if(index == null)
+			throw new NoSuchElementException();
+
+		heap.set(index, newElem);
+		updatePosition(newElem, index);
+		if(comparator.compare(newElem, oldElem) < 0 ) {
+			siftUp(index);
+		} else {
+			siftDown(index);
+		}
 	}
 
 	// Sifts a node up.
@@ -46,20 +67,22 @@ public class PriorityQueue<E> {
 	// be less than its parent, but all other elements are correct.
 	private void siftUp(int index) {
 		int original = index; //See if item has been shifted
-		E value = heap.get(index);
+		E elem = heap.get(index);
 
 		// Stop when parent is root
 		while(parent(index) >= 0 && index > 0) {
 			int parent = parent(index);
-			E parentValue = heap.get(parent);
-			if(comparator.compare(value, parentValue) < 0) {
-				heap.set(index, parentValue);
+			E parentElem = heap.get(parent);
+			if(comparator.compare(elem, parentElem) < 0) {
+				heap.set(index, parentElem);
+				updatePosition(parentElem, index);
 				index = parent;
 			} else break;
 		}
-		
+
 		if(index != original) {
-			heap.set(index, value);
+			heap.set(index, elem);
+			updatePosition(elem, index);
 		}
 	}
      
@@ -68,7 +91,7 @@ public class PriorityQueue<E> {
 	// be greater than its children, but all other elements are correct.
 	private void siftDown(int index) {
 		int original = index; //See if item has been shifted
-		E value = heap.get(index);
+		E elem = heap.get(index);
 		
 		// Stop when the node is a leaf.
 		while (leftChild(index) < heap.size()) {
@@ -78,29 +101,43 @@ public class PriorityQueue<E> {
 			// Work out whether the left or right child is smaller.
 			// Start out by assuming the left child is smaller...
 			int child = left;
-			E childValue = heap.get(left);
+			E childElem = heap.get(left);
 
 			// ...but then check in case the right child is smaller.
 			// (We do it like this because maybe there's no right child.)
 			if (right < heap.size()) {
-				E rightValue = heap.get(right);
-				if (comparator.compare(childValue, rightValue) > 0) {
+				E rightElem = heap.get(right);
+				if (comparator.compare(childElem, rightElem) > 0) {
 					child = right;
-					childValue = rightValue;
+					childElem = rightElem;
 				}
 			}
 
 			// If the child is smaller than the parent,
 			// carry on downwards.
-			if (comparator.compare(value, childValue) > 0) {
-				heap.set(index, childValue);
+			if (comparator.compare(elem, childElem) > 0) {
+				heap.set(index, childElem);
+				updatePosition(childElem, index);
 				index = child;
 			} else break;
 		}
 
 
 		if(index != original) {
-			heap.set(index, value);
+			heap.set(index, elem);
+			updatePosition(elem, index);
+		}
+	}
+
+	// Update position in the hash map of registered indices of
+	// elem with new position index
+	private void updatePosition(E elem, Integer index) {
+		// Check if elem is registered; put in map if not
+//		System.out.println(elem.toString() + ", Index: " + index);
+		if(this.positions.get(elem) == null) {
+			this.positions.put(elem, index);
+		} else {
+			this.positions.replace(elem, index);
 		}
 	}
 
