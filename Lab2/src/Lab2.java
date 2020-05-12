@@ -31,7 +31,6 @@ public class Lab2 {
 			}
 
 			if( action.equals("K") ) {
-				// TODO: add new buy bid
 				Bid buyer = new Bid(name, price);
 				if(sellers.size() > 0) {
 					Bid seller = sellers.minimum();
@@ -46,7 +45,6 @@ public class Lab2 {
 				}
 
 			} else if( action.equals("S") ) {
-				// TODO: add new sell bid
 				Bid seller = new Bid(name, price);
 				if(buyers.size() > 0) {
 					Bid buyer = buyers.minimum();
@@ -61,7 +59,6 @@ public class Lab2 {
 				}
 
 			} else if( action.equals("NK") ){
-				// TODO: update existing buy bid. use parts[3].
 				Bid oldBid = new Bid(name, price);
 				Bid newBid = new Bid(name, Integer.parseInt(parts[3]));
 				buyers.update(oldBid, newBid);
@@ -75,7 +72,6 @@ public class Lab2 {
 					}
 				}
 			} else if( action.equals("NS") ){
-				// TODO: update existing sell bid. use parts[3].
 				Bid oldBid = new Bid(name, price);
 				Bid newBid = new Bid(name, Integer.parseInt(parts[3]));
 				sellers.update(oldBid, newBid);
@@ -107,20 +103,12 @@ public class Lab2 {
 				}
 
 			}
-			// TODO:
-			// compare the bids of highest priority from each of
-			// each priority queues.
-			// if the lowest seller price is lower than or equal to
-			// the highest buyer price, then remove one bid from
-			// each priority queue and add a description of the
-			// transaction to the output.
 		}
 
 		sb.append("Order book:\n");
 
 		sb.append("Sellers: ");
-		// TODO: print remaining sellers.
-		//       can remove from priority queue until it is empty.
+
 		if(sellers.size() > 0) {
 			while(sellers.size() > 1) {
 				Bid seller = sellers.minimum();
@@ -131,8 +119,7 @@ public class Lab2 {
 		}
 
 		sb.append("Buyers: ");
-		// TODO: print remaining buyers
-		//       can remove from priority queue until it is empty.
+
 		if(buyers.size() > 0){
 			while(buyers.size() > 1) {
 				Bid buyer = buyers.minimum();

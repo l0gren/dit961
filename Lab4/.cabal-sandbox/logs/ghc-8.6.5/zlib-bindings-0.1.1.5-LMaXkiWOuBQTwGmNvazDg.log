@@ -1,0 +1,4 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\zlib-bindings-0.1.1.5-LMaXkiWOuBQTwGmNvazDg
+el.hs, dist\dist-sandbox-ece26921\build\Codec\Zlib\Lowlevel.o )
+[2 of 2] Compiling Codec.Zlib       ( Codec\Zlib.hs, dist\dist-sandbox-ece26921\build\Codec\Zlib.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14334\zlib-bindings-0.1.1.5'

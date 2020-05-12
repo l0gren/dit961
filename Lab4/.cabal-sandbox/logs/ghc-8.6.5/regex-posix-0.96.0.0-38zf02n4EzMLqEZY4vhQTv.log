@@ -1,0 +1,9 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\regex-posix-0.96.0.0-38zf02n4EzMLqEZY4vhQTv
+26921\build\autogen\Paths_regex_posix.hs, dist\dist-sandbox-ece26921\build\Paths_regex_posix.o )
+[2 of 7] Compiling Text.Regex.Posix.Wrap ( dist\dist-sandbox-ece26921\build\Text\Regex\Posix\Wrap.hs, dist\dist-sandbox-ece26921\build\Text\Regex\Posix\Wrap.o )
+[3 of 7] Compiling Text.Regex.Posix.String ( src\Text\Regex\Posix\String.hs, dist\dist-sandbox-ece26921\build\Text\Regex\Posix\String.o )
+[4 of 7] Compiling Text.Regex.Posix.Sequence ( src\Text\Regex\Posix\Sequence.hs, dist\dist-sandbox-ece26921\build\Text\Regex\Posix\Sequence.o )
+[5 of 7] Compiling Text.Regex.Posix.ByteString ( src\Text\Regex\Posix\ByteString.hs, dist\dist-sandbox-ece26921\build\Text\Regex\Posix\ByteString.o )
+[6 of 7] Compiling Text.Regex.Posix.ByteString.Lazy ( src\Text\Regex\Posix\ByteString\Lazy.hs, dist\dist-sandbox-ece26921\build\Text\Regex\Posix\ByteString\Lazy.o )
+[7 of 7] Compiling Text.Regex.Posix ( src\Text\Regex\Posix.hs, dist\dist-sandbox-ece26921\build\Text\Regex\Posix.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14334\regex-posix-0.96.0.0'

@@ -1,0 +1,36 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\snap-core-1.0.4.1-JnQ826sokIOevVEh1AyG6
+ebug.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Debug.o )
+[ 2 of 18] Compiling Snap.Types.Headers ( src\Snap\Types\Headers.hs, dist\dist-sandbox-ece26921\build\Snap\Types\Headers.o )
+[ 3 of 18] Compiling Snap.Internal.Http.Types ( src\Snap\Internal\Http\Types.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Types.o )
+
+src\Snap\Internal\Http\Types.hs:50:1: warning: [-Wunused-imports]
+    The import of `Data.Time.Clock.POSIX' is redundant
+      except perhaps to import instances from `Data.Time.Clock.POSIX'
+    To import instances alone, use: import Data.Time.Clock.POSIX()
+   |
+50 | import           Data.Time.Clock.POSIX
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\Snap\Internal\Http\Types.hs:1283:11: warning: [-Wdeprecations]
+    In the use of `parseTime'
+    (imported from Data.Time.Format, but defined in time-1.8.0.2:Data.Time.Format.Parse):
+    Deprecated: "use "parseTimeM True" instead"
+     |
+1283 |     prs = parseTime defaultTimeLocale "%a, %d %b %Y %H:%M:%S GMT"
+     |           ^^^^^^^^^
+[ 4 of 18] Compiling Snap.Internal.Test.Assertions ( src\Snap\Internal\Test\Assertions.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Test\Assertions.o )
+[ 5 of 18] Compiling Snap.Internal.Parsing ( src\Snap\Internal\Parsing.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Parsing.o )
+[ 6 of 18] Compiling Snap.Internal.Core ( src\Snap\Internal\Core.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Core.o )
+[ 7 of 18] Compiling Snap.Internal.Routing ( src\Snap\Internal\Routing.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Routing.o )
+[ 8 of 18] Compiling Snap.Internal.Instances ( src\Snap\Internal\Instances.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Instances.o )
+[ 9 of 18] Compiling Snap.Core        ( src\Snap\Core.hs, dist\dist-sandbox-ece26921\build\Snap\Core.o )
+[10 of 18] Compiling Snap.Internal.Util.FileUploads ( src\Snap\Internal\Util\FileUploads.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Util\FileUploads.o )
+[11 of 18] Compiling Snap.Internal.Util.FileServe ( src\Snap\Internal\Util\FileServe.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Util\FileServe.o )
+[12 of 18] Compiling Snap.Internal.Test.RequestBuilder ( src\Snap\Internal\Test\RequestBuilder.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Test\RequestBuilder.o )
+[13 of 18] Compiling Snap.Test        ( src\Snap\Test.hs, dist\dist-sandbox-ece26921\build\Snap\Test.o )
+[14 of 18] Compiling Snap.Util.CORS   ( src\Snap\Util\CORS.hs, dist\dist-sandbox-ece26921\build\Snap\Util\CORS.o )
+[15 of 18] Compiling Snap.Util.FileServe ( src\Snap\Util\FileServe.hs, dist\dist-sandbox-ece26921\build\Snap\Util\FileServe.o )
+[16 of 18] Compiling Snap.Util.FileUploads ( src\Snap\Util\FileUploads.hs, dist\dist-sandbox-ece26921\build\Snap\Util\FileUploads.o )
+[17 of 18] Compiling Snap.Util.GZip   ( src\Snap\Util\GZip.hs, dist\dist-sandbox-ece26921\build\Snap\Util\GZip.o )
+[18 of 18] Compiling Snap.Util.Proxy  ( src\Snap\Util\Proxy.hs, dist\dist-sandbox-ece26921\build\Snap\Util\Proxy.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14332\snap-core-1.0.4.1'

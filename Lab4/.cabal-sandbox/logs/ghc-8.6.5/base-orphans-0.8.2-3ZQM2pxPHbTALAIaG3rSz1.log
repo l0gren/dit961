@@ -1,0 +1,4 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\base-orphans-0.8.2-3ZQM2pxPHbTALAIaG3rSz1
+lude.hs, dist\dist-sandbox-ece26921\build\Data\Orphans\Prelude.o )
+[2 of 2] Compiling Data.Orphans     ( src\Data\Orphans.hs, dist\dist-sandbox-ece26921\build\Data\Orphans.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-13074\base-orphans-0.8.2'

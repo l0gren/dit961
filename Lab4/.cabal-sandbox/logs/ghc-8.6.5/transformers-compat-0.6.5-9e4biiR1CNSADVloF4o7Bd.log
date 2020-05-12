@@ -1,0 +1,6 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\transformers-compat-0.6.5-9e4biiR1CNSADVloF4o7Bd
+Control\Monad\Trans\Instances.hs, dist\dist-sandbox-ece26921\build\Control\Monad\Trans\Instances.o )
+[2 of 4] Compiling Data.Functor.Classes.Generic.Internal ( generics\Data\Functor\Classes\Generic\Internal.hs, dist\dist-sandbox-ece26921\build\Data\Functor\Classes\Generic\Internal.o )
+[3 of 4] Compiling Data.Functor.Classes.Generic ( generics\Data\Functor\Classes\Generic.hs, dist\dist-sandbox-ece26921\build\Data\Functor\Classes\Generic.o )
+[4 of 4] Compiling Paths_transformers_compat ( dist\dist-sandbox-ece26921\build\autogen\Paths_transformers_compat.hs, dist\dist-sandbox-ece26921\build\Paths_transformers_compat.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14335\transformers-compat-0.6.5'

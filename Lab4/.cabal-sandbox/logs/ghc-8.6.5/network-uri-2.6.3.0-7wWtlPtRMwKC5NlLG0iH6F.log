@@ -1,0 +1,19 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\network-uri-2.6.3.0-7wWtlPtRMwKC5NlLG0iH6F
+st-sandbox-ece26921\build\Network\URI.o )
+
+Network\URI.hs:10:14: warning: [-Wtrustworthy-safe]
+    `Network.URI' is marked as Trustworthy but has been inferred as safe!
+   |
+10 | {-# LANGUAGE Trustworthy #-}
+   |              ^^^^^^^^^^^
+[2 of 3] Compiling Network.URI.Lens ( Network\URI\Lens.hs, dist\dist-sandbox-ece26921\build\Network\URI\Lens.o )
+
+Network\URI\Lens.hs:20:1: warning: [-Wunused-imports]
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+   |
+20 | import           Control.Applicative
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[3 of 3] Compiling Network.URI.Static ( Network\URI\Static.hs, dist\dist-sandbox-ece26921\build\Network\URI\Static.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14334\network-uri-2.6.3.0'

@@ -1,0 +1,31 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\network-3.1.1.1-Izwsyk64OoDBVuRysfRa9D
+\Socket\ByteString\Internal.hs, dist\dist-sandbox-ece26921\build\Network\Socket\ByteString\Internal.o )
+[ 2 of 22] Compiling Network.Socket.Imports ( Network\Socket\Imports.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Imports.o )
+[ 3 of 22] Compiling Network.Socket.If ( Network\Socket\If.hs, dist\dist-sandbox-ece26921\build\Network\Socket\If.o )
+[ 4 of 22] Compiling Network.Socket.Fcntl ( Network\Socket\Fcntl.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Fcntl.o )
+[ 5 of 22] Compiling Network.Socket.Cbits ( dist\dist-sandbox-ece26921\build\Network\Socket\Cbits.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Cbits.o )
+[ 6 of 22] Compiling Network.Socket.Types ( dist\dist-sandbox-ece26921\build\Network\Socket\Types.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Types.o )
+[ 7 of 22] Compiling Network.Socket.Internal ( Network\Socket\Internal.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Internal.o )
+[ 8 of 22] Compiling Network.Socket.Options ( dist\dist-sandbox-ece26921\build\Network\Socket\Options.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Options.o )
+[ 9 of 22] Compiling Network.Socket.Syscall ( Network\Socket\Syscall.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Syscall.o )
+[10 of 22] Compiling Network.Socket.Name ( Network\Socket\Name.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Name.o )
+[11 of 22] Compiling Network.Socket.Info ( dist\dist-sandbox-ece26921\build\Network\Socket\Info.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Info.o )
+[12 of 22] Compiling Network.Socket.Handle ( Network\Socket\Handle.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Handle.o )
+[13 of 22] Compiling Network.Socket.Buffer ( dist\dist-sandbox-ece26921\build\Network\Socket\Buffer.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Buffer.o )
+[14 of 22] Compiling Network.Socket.SockAddr ( Network\Socket\SockAddr.hs, dist\dist-sandbox-ece26921\build\Network\Socket\SockAddr.o )
+[15 of 22] Compiling Network.Socket.Shutdown ( Network\Socket\Shutdown.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Shutdown.o )
+[16 of 22] Compiling Network.Socket.ByteString.IO ( dist\dist-sandbox-ece26921\build\Network\Socket\ByteString\IO.hs, dist\dist-sandbox-ece26921\build\Network\Socket\ByteString\IO.o )
+[17 of 22] Compiling Network.Socket.ByteString ( Network\Socket\ByteString.hs, dist\dist-sandbox-ece26921\build\Network\Socket\ByteString.o )
+[18 of 22] Compiling Network.Socket.ByteString.Lazy.Windows ( Network\Socket\ByteString\Lazy\Windows.hs, dist\dist-sandbox-ece26921\build\Network\Socket\ByteString\Lazy\Windows.o )
+[19 of 22] Compiling Network.Socket.Address ( Network\Socket\Address.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Address.o )
+[20 of 22] Compiling Network.Socket.Unix ( dist\dist-sandbox-ece26921\build\Network\Socket\Unix.hs, dist\dist-sandbox-ece26921\build\Network\Socket\Unix.o )
+[21 of 22] Compiling Network.Socket   ( Network\Socket.hs, dist\dist-sandbox-ece26921\build\Network\Socket.o )
+[22 of 22] Compiling Network.Socket.ByteString.Lazy ( Network\Socket\ByteString\Lazy.hs, dist\dist-sandbox-ece26921\build\Network\Socket\ByteString\Lazy.o )
+emp/cabal-tmp-14332/network-3.1.1.1/configure: line 3978: sort: No such file or directory
+C:\/Users/Emil/AppData/Local/Temp/cabal-tmp-14332/network-3.1.1.1/configure: line 3975: sed: No such file or directory
+configure: creating ./config.status
+config.status: creating include/HsNetworkConfig.h
+configure: WARNING: unrecognized options: --with-compiler
+C:\/Users/Emil/AppData/Local/Temp/cabal-tmp-14332/network-3.1.1.1/configure: line 38: sort: No such file or directory
+C:\/Users/Emil/AppData/Local/Temp/cabal-tmp-14332/network-3.1.1.1/configure: line 35: sed: No such file or directory
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14332\network-3.1.1.1'

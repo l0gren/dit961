@@ -3,8 +3,11 @@ import java.util.HashMap;
 
 // A priority queue.
 public class PriorityQueue<E> {
+	//The actual heap of elements
 	private ArrayList<E> heap = new ArrayList<>();
+	//Generic comparator
 	private Comparator<E> comparator;
+	//Map of indices in heap, for fast retrieval
 	private HashMap<E, Integer> positions = new HashMap<>();
 
 	public PriorityQueue(Comparator<E> comparator) {
@@ -16,7 +19,7 @@ public class PriorityQueue<E> {
 		return heap.size();
 	}
      
-	// Adds an item to the priority queue.
+	// Adds an item, elem, to the priority queue.
 	public void add(E elem) {
 		heap.add(elem);
 		int index = heap.size()-1;
@@ -47,7 +50,9 @@ public class PriorityQueue<E> {
 		if (heap.size() > 0) siftDown(0);
 	}
 
-	// Updates the value of elem in the queue
+	// Updates the value of elem in the queue. Takes two elements
+	// as parameters: the old element to be updated, and the new element
+	// to be put in its place.
 	public void update(E oldElem, E newElem) {
 		Integer index = this.positions.get(oldElem);
 		if(index == null)

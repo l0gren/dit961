@@ -1,0 +1,7 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\vault-0.3.1.4-CkO9rSdm7YsKs36HQwiJKD
+dist\dist-sandbox-ece26921\build\Data\Unique\Really.o )
+[2 of 5] Compiling Data.Vault.ST.Lazy ( src\Data\Vault\ST\Lazy.hs, dist\dist-sandbox-ece26921\build\Data\Vault\ST\Lazy.o )
+[3 of 5] Compiling Data.Vault.Lazy  ( src\Data\Vault\Lazy.hs, dist\dist-sandbox-ece26921\build\Data\Vault\Lazy.o )
+[4 of 5] Compiling Data.Vault.ST.Strict ( src\Data\Vault\ST\Strict.hs, dist\dist-sandbox-ece26921\build\Data\Vault\ST\Strict.o )
+[5 of 5] Compiling Data.Vault.Strict ( src\Data\Vault\Strict.hs, dist\dist-sandbox-ece26921\build\Data\Vault\Strict.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14335\vault-0.3.1.4'

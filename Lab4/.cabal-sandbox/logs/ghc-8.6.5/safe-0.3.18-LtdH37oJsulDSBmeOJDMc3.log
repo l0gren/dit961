@@ -1,0 +1,7 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\safe-0.3.18-LtdH37oJsulDSBmeOJDMc3
+box-ece26921\build\Safe\Partial.o )
+[2 of 5] Compiling Safe.Util        ( Safe\Util.hs, dist\dist-sandbox-ece26921\build\Safe\Util.o )
+[3 of 5] Compiling Safe.Foldable    ( Safe\Foldable.hs, dist\dist-sandbox-ece26921\build\Safe\Foldable.o )
+[4 of 5] Compiling Safe.Exact       ( Safe\Exact.hs, dist\dist-sandbox-ece26921\build\Safe\Exact.o )
+[5 of 5] Compiling Safe             ( Safe.hs, dist\dist-sandbox-ece26921\build\Safe.o )
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14334\safe-0.3.18'

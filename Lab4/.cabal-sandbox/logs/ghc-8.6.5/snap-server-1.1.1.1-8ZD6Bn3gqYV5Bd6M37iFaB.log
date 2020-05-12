@@ -1,0 +1,49 @@
+Installing library in C:\Users\Emil\Documents\code\School\DIT961\Lab4\.cabal-sandbox\x86_64-windows-ghc-8.6.5\snap-server-1.1.1.1-8ZD6Bn3gqYV5Bd6M37iFaB
+l\Concurrent\Extended.hs, dist\dist-sandbox-ece26921\build\Control\Concurrent\Extended.o )
+[ 2 of 18] Compiling Paths_snap_server ( dist\dist-sandbox-ece26921\build\autogen\Paths_snap_server.hs, dist\dist-sandbox-ece26921\build\Paths_snap_server.o )
+[ 3 of 18] Compiling Snap.Internal.Http.Server.Address ( src\Snap\Internal\Http\Server\Address.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Address.o )
+
+src\Snap\Internal\Http\Server\Address.hs:70:5: warning: [-Woverlapping-patterns]
+    Pattern match is redundant
+    In a case alternative: _ -> ...
+   |
+70 |     _                     -> fail "Unsupported address type"
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[ 4 of 18] Compiling Snap.Internal.Http.Server.Clock ( src\Snap\Internal\Http\Server\Clock.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Clock.o )
+[ 5 of 18] Compiling Snap.Internal.Http.Server.Common ( src\Snap\Internal\Http\Server\Common.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Common.o )
+[ 6 of 18] Compiling Snap.Internal.Http.Server.Config ( src\Snap\Internal\Http\Server\Config.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Config.o )
+[ 7 of 18] Compiling Snap.Http.Server.Config ( src\Snap\Http\Server\Config.hs, dist\dist-sandbox-ece26921\build\Snap\Http\Server\Config.o )
+[ 8 of 18] Compiling Snap.Internal.Http.Server.Date ( src\Snap\Internal\Http\Server\Date.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Date.o )
+[ 9 of 18] Compiling Snap.Internal.Http.Server.Parser ( src\Snap\Internal\Http\Server\Parser.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Parser.o )
+[10 of 18] Compiling Snap.Internal.Http.Server.Thread ( src\Snap\Internal\Http\Server\Thread.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Thread.o )
+[11 of 18] Compiling Snap.Internal.Http.Server.TimeoutManager ( src\Snap\Internal\Http\Server\TimeoutManager.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\TimeoutManager.o )
+[12 of 18] Compiling Snap.Internal.Http.Server.Types ( src\Snap\Internal\Http\Server\Types.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Types.o )
+[13 of 18] Compiling Snap.Internal.Http.Server.TLS ( src\Snap\Internal\Http\Server\TLS.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\TLS.o )
+[14 of 18] Compiling Snap.Internal.Http.Server.Socket ( src\Snap\Internal\Http\Server\Socket.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Socket.o )
+
+src\Snap\Internal\Http\Server\Socket.hs:18:1: warning: [-Wunused-imports]
+    The import of `Control.Monad' is redundant
+      except perhaps to import instances from `Control.Monad'
+    To import instances alone, use: import Control.Monad()
+   |
+18 | import           Control.Monad                     (when)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\Snap\Internal\Http\Server\Socket.hs:19:1: warning: [-Wunused-imports]
+    The import of `Data.Bits' is redundant
+      except perhaps to import instances from `Data.Bits'
+    To import instances alone, use: import Data.Bits()
+   |
+19 | import           Data.Bits                         (complement, (.&.))
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[15 of 18] Compiling Snap.Internal.Http.Server.Session ( src\Snap\Internal\Http\Server\Session.hs, dist\dist-sandbox-ece26921\build\Snap\Internal\Http\Server\Session.o )
+[16 of 18] Compiling Snap.Http.Server.Types ( src\Snap\Http\Server\Types.hs, dist\dist-sandbox-ece26921\build\Snap\Http\Server\Types.o )
+[17 of 18] Compiling System.FastLogger ( src\System\FastLogger.hs, dist\dist-sandbox-ece26921\build\System\FastLogger.o )
+[18 of 18] Compiling Snap.Http.Server ( src\Snap\Http\Server.hs, dist\dist-sandbox-ece26921\build\Snap\Http\Server.o )
+
+src\Snap\Http\Server.hs:39:1: warning: [-Wunused-imports]
+    The import of `Bool' from module `Prelude' is redundant
+   |
+39 | import           Prelude                           (Bool (..), Eq (..), IO, Maybe (..), Monad (..), Show (..), String, const, flip, fst, id, mapM, mapM_, maybe, snd, unzip3, zip, ($), ($!), (++), (.))
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cabal: Leaving directory 'C:\Users\Emil\AppData\Local\Temp\cabal-tmp-14332\snap-server-1.1.1.1'
