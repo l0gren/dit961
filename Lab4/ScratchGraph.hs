@@ -2,17 +2,14 @@ module ScratchGraph (testGraph) where
 
 import Graph
 
-
-addEdge' a w b g = addEdge b w a (addEdge a w b g)
-
 testGraph =
-  addEdge' "D" 4 "F" $
-  addEdge' "C" 2 "D" $
-  addEdge' "C" 3 "B" $
-  addEdge' "D" 3 "E" $
-  addEdge' "E" 2 "B" $
-  addEdge' "A" 1 "E" $
-  addEdge' "A" 1 "B" $
+  addEdge "D" 4 "F" $
+  addEdge "C" 2 "D" $
+  addEdge "C" 3 "B" $
+  addEdge "D" 3 "E" $
+  addEdge "E" 2 "B" $
+  addEdge "A" 1 "E" $
+  addEdge "A" 1 "B" $
   addNode "A" $
   addNode "B" $
   addNode "C" $

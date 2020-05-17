@@ -13,13 +13,18 @@ type Cost = Integer
 
 --Test Dijkstra's
 --shortestPath :: Graph Name Cost -> Name -> Name -> Map Name (Cost, Name)
---shortestPath g from to = dijkstra g (enqueue (from, 0, from) P.empty) M.empty
+--shortestPath g from to = dijkstra g (P.singleton from (0, from)) M.empty
 
 --enqueue (from, 0, from) P.empty
 --P.singleton from (0, from)
 
 shortestPath :: Graph Name Cost -> Name -> Name -> Maybe ([Name], Cost)
-shortestPath g from to = parsePath from to (dijkstra g (enqueue (from, 0, from) P.empty) M.empty) ([], 0)  
+shortestPath g from to = parsePath from to cost paths ([], 0)
+  where
+    paths = dijkstra g (enqueue (from, 0, from) P.empty) M.empty
+    cost = case (M.lookup to paths) of
+      Nothing -> error "No path found"
+      Just cost -> fst cost
 
 dijkstra :: Graph Name Cost -> PSQ Name (Cost, Name) -> Map Name (Cost, Name) -> Map Name (Cost, Name)
 dijkstra g q s
@@ -40,25 +45,26 @@ dijkstra g q s
         Just adj -> adj --How to write properly?
       q' = listToQueue src cost adj (P.deleteMin q)
 
+-- Insert target of an edge into queue {Target: (weight, Source)}
 enqueue :: (Name, Cost, Name) -> PSQ Name (Cost, Name) -> PSQ Name (Cost, Name)
-enqueue (from, cost, to) q = P.insert to (cost, from) q --Need error/collision handling?
+enqueue (src, cost, target) q = P.insert target (cost, src) q --Need error/collision handling?
 
 listToQueue :: Name -> Cost -> [(Cost, Name)] -> PSQ Name (Cost, Name) -> PSQ Name (Cost, Name)
 listToQueue _ _ [] q = q
-listToQueue n c (x:xs) q = listToQueue n c xs (enqueue ((snd x), ((fst x)+c), n) q)
+listToQueue src c (x:xs) q = listToQueue src c xs (enqueue (src, ((fst x)+c), (snd x)) q)
 
-parsePath :: Name -> Name -> Map Name (Cost, Name) -> ([Name], Cost) -> Maybe ([Name], Cost)
-parsePath from to s (n, c)
-  | from == to = Just (n, c)
+parsePath :: Name -> Name -> Cost -> Map Name (Cost, Name) -> ([Name], Cost) -> Maybe ([Name], Cost)
+parsePath from to cost s (trail, c)
+  | from == to = Just (from:trail, cost)
   | (M.notMember from s) = Nothing
-  | otherwise = parsePath from to' s' (n', c')
+  | otherwise = parsePath from to' cost s' (trail', c)
     where 
       s' = M.delete to s
       to' = case (M.lookup to s) of
         Nothing -> error "Could not find node in the map"
         Just to' -> snd to' --How to write properly?
-      n' = to:n
-      c' = case (M.lookup to s) of
+      trail' = to:trail
+      cost' = case (M.lookup to s) of
         Nothing -> error "Could not find node in the map"
-        Just c' -> fst c' --How to write properly?
+        Just cost' -> fst cost' --How to write properly?
 
