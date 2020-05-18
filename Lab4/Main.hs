@@ -1,8 +1,8 @@
 import Route
 --import RouteGUI
 import Graph  -- Create a module and use a sensible graph representation
-import Dijkstra
-import ScratchGraph
+import Pathfinder
+import TestGraph
 
 
 

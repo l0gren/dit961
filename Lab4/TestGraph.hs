@@ -1,4 +1,4 @@
-module ScratchGraph (testGraph) where
+module TestGraph (testGraph) where
 
 import Graph
 
