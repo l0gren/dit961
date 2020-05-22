@@ -15,7 +15,7 @@ shortestPath g from to = parsePath from to cost paths ([], 0)
     paths = dijkstra g (enqueue (from, 0, from) P.empty) M.empty
     cost = case (M.lookup to paths) of
       Nothing -> error "No path found"
-      Just cost -> fst cost -- How to write in proper Haskell?
+      Just cost -> fst cost 
 
 -- Implementation of Dijkstra's shortest path. Returns a map of nodes with their distance from starting node, and previous node
 dijkstra :: (Ord name, Ord cost, Num cost) =>  Graph name cost -> PSQ name (cost, name) -> Map name (cost, name) -> Map name (cost, name)
@@ -30,7 +30,7 @@ dijkstra g q s
         where
           adj = case (Graph.neighbors g src) of
             Nothing -> error "Error: Node not in graph"
-            Just adj -> Maybe.fromJust (Graph.neighbors g src) -- How to write in proper Haskell?
+            Just adj -> Maybe.fromJust (Graph.neighbors g src)
       s'
         | M.member src s = s
         | otherwise = M.insert src trail s         
